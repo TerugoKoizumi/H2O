@@ -19,7 +19,7 @@ with paropen('a.dat', 'w') as fd:
                     kpts={'gamma':True},
                     xc='PBE',
                     occupations=FermiDirac(0.0, fixmagmom=True),
-                    eigensolver='rmm-diis',
+                    eigensolver='dav',
                     convergence={'energy': 2.0e-11},
                     txt=f'h2o-{ecut}.txt')
         h2o.calc = calc
